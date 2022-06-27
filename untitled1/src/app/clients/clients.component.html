@@ -1,0 +1,85 @@
+<table style="width:100%">
+  <thead>
+
+  <tr>
+
+
+    <th colspan="4">ID</th>
+    <th colspan="4">Fname</th>
+    <th colspan="4">CIN</th>
+    <th colspan="4">Password</th>
+    <th colspan="4">birthday</th>
+    <th colspan="4">email</th>
+    <th colspan="4">number</th>
+    <th colspan="4">type client</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let client of clients">
+    <td colspan="4">{{ client.id }}</td>
+    <td colspan="4">{{ client.fname }}</td>
+    <td colspan="4">{{ client.cin }}</td>
+    <td colspan="4">{{ client.password }}</td>
+    <td colspan="4">{{ client.dateB }}</td>
+    <td colspan="4">{{ client.email }}</td>
+    <td colspan="4">{{ client.number }}</td>
+    <td colspan="4">{{ client.clientT }}</td>
+  </tr>
+  <table style="width:100%">
+    <thead>
+
+    <tr>
+
+
+      <th colspan="2">Email</th>
+      <th colspan="4">Reply</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <form method="post">
+      <tr>
+        <td colspan="2" ><input type="text" name="A_mail" placeholder="email" ></td>
+        <td colspan="14">
+
+          <div class="clearfix">
+
+            <label for="yes"  class="radio-inline"
+            ><input
+              type="radio"
+              name="answer"
+              value="yes"
+              id="yes"
+
+            />yes</label
+            >
+            <label for="no" class="radio-inline"
+                   class="clearfix"><input
+              type="radio"
+              name="answer"
+              value="no"
+              id="no"
+
+            />no</label
+            >
+
+
+          </div>
+
+        </td>
+
+
+      </tr>
+    </form>
+
+
+
+    </tbody>
+  </table>
+  <button type="submit" href="/">Submit</button>
+
+  </tbody>
+</table>

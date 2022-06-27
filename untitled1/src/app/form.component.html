@@ -1,0 +1,55 @@
+<head>
+
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+<div class="main-block" id="form">
+
+  <form >
+    <h1>Formulaire client</h1>
+    <div class="info">
+
+      <input class="fname" type="text" name="Fname" [(ngModel)]="Fname"  placeholder="Full name" id="Fname">
+      <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="password">
+      <input type="number" name="CIN" placeholder="CIN" [(ngModel)]="CIN" id="CIN">
+      <input type="date" name="dateB" placeholder="Date de naissance" [(ngModel)]="dateB" id="dateB">
+      <input type="email" name="email" placeholder="email" [(ngModel)]="email" id="email">
+      <select name="clientT" id="clientT" [(ngModel)]="clientT" style="width:100%">
+        <optgroup label="client type" >
+          <option value="client">client</option>
+          <option value="c">client fidel</option>
+
+
+
+        </optgroup>
+      </select>
+      <input type="number" name="number" placeholder="number" [(ngModel)]="number" required pattern="(9|2|5)[0-9][0-9][0-9][0-9][0-9][0-9][0-9]" id="number">
+
+
+
+
+
+
+
+    </div>
+
+    <button type="submit" href="/" [disabled]="!Fname || !password || !CIN || !email" (click)="CreateRecord()" >Submit</button>
+  </form>
+</div>
+</body>
